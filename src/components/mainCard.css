@@ -1,0 +1,76 @@
+.container {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr 1fr 1fr 1fr;
+    width: 400px;
+    /* border: dotted 3px black; */
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 5px;
+}
+
+#city {
+    grid-column : 1 / span 4;
+    font-size : 2em;
+}
+#temp {
+    grid-column : 2 / span 2;
+    grid-row : span 2;
+    font-size: 4em;
+    font-weight: 3em;
+}
+
+#currSky {
+    grid-column : 1 / span 4;
+    grid-row-start: 4;
+    font-size: 2em;
+    font-weight: 2em; 
+}
+#wind {
+    grid-column : 1 / span 2;
+    align-self: end;
+}
+#humid {
+    grid-column : 3 / span 2;
+    align-self: end;
+}
+#vis {
+    grid-column : 1 / span 4;
+    align-self: start;
+}
+
+.selected { 
+            color : yellow; 
+            text-shadow: 1px 1px 1px black;
+}
+.unselected { 
+            color : rgb(94, 93, 93) ;
+           
+}
+
+
+.container > button {
+    justify-self: start;
+    font-weight: 2em;
+    font-size: 1.5em;
+    background-color: rgb(255, 255, 255, 0.1);
+    border : 0px;
+    margin : 0px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(224, 222, 222);
+
+}
+#cel {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    align-self: end;
+}
+#far {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    align-self: start;
+   
+}
